@@ -2,5 +2,15 @@
   "name": "spore-semver",
   "version": "1.0.0",
   "description": "CMake scripts for semantic versioning",
-  "homepage": "https://github.com/sporacid/spore-semver"
+  "homepage": "https://github.com/sporacid/spore-semver",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
 }
