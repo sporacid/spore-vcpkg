@@ -8,5 +8,5 @@ vcpkg_from_github(
 
 file(
   INSTALL ${SOURCE_PATH}/cmake/spore_semver.cmake
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore/spore_semver.cmake
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
 )

@@ -19,7 +19,7 @@ vcpkg_cmake_install()
 
 file(
   INSTALL ${SOURCE_PATH}/cmake/spore_codegen.cmake
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore/spore_codegen.cmake
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
 )
 
 vcpkg_cmake_config_fixup()
