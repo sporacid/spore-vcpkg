@@ -1,0 +1,6 @@
+{
+  "name": "spore-semver",
+  "version": "1.0.0",
+  "description": "CMake scripts for semantic versioning",
+  "homepage": "https://github.com/sporacid/spore-semver"
+}

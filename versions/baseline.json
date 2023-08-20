@@ -1,0 +1,12 @@
+{
+  "default": {
+    "spore-codegen": {
+      "baseline": "1.0.0",
+      "port-version": 0
+    },
+    "spore-semver": {
+      "baseline": "1.0.0",
+      "port-version": 0
+    }
+  }
+}
