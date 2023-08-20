@@ -9,10 +9,10 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
-  -Wno-dev
   -DWITH_TESTS=OFF
   -DWITH_EXAMPLES=OFF
   -DWITH_COMPILE_COMMANDS=OFF
+  -DFETCHCONTENT_FULLY_DISCONNECTED=OFF
 )
 
 vcpkg_cmake_install()
