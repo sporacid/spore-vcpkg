@@ -1,10 +1,22 @@
 {
   "default": {
-    "spore-codegen": {
-      "baseline": "1.0.0",
+    "foonathan-cppast": {
+      "baseline": "latest",
+      "port-version": 0
+    },
+    "foonathan-type-safe": {
+      "baseline": "latest",
+      "port-version": 0
+    },
+    "p-ranav-glob": {
+      "baseline": "latest",
       "port-version": 0
     },
     "spore-semver": {
+      "baseline": "1.0.0",
+      "port-version": 0
+    },
+    "spore-codegen": {
       "baseline": "1.0.0",
       "port-version": 0
     }
