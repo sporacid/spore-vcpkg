@@ -3,6 +3,7 @@
   "homepage": "https://github.com/foonathan/cppast",
   "version-string": "latest",
   "dependencies": [
+    "catch2",
     "debug-assert",
     "foonathan-type-safe",
     "tiny-process-library",
