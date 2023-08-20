@@ -1,0 +1,15 @@
+{
+  "name": "foonathan-cppast",
+  "homepage": "https://github.com/foonathan/type_safe",
+  "version-string": "latest",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
