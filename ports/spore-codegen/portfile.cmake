@@ -8,7 +8,6 @@ vcpkg_from_github(
 
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
-  PREFER_NINJA
   OPTIONS
   -Wno-dev
   -DWITH_TESTS=OFF
@@ -19,7 +18,7 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 
 file(
-  INSTALL ${CMAKE_CURRENT_LIST_DIR}/cmake/spore_codegen.cmake
+  INSTALL ${SOURCE_PATH}/cmake/spore_codegen.cmake
   DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore/spore_codegen.cmake
 )
 
