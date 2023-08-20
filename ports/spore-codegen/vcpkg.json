@@ -4,6 +4,20 @@
   "description": "A tool to generate code from libclang AST",
   "homepage": "https://github.com/sporacid/spore-codegen",
   "dependencies": [
+    "argparse",
+    "catch2",
+    "fmt",
+    "inja",
+    "nlohmann-json",
+    "picosha2",
+    "spdlog",
+    "spore-semver",
+    {
+      "name": "llvm",
+      "features": [
+        "clang"
+      ]
+    },
     {
       "name": "vcpkg-cmake",
       "host": true
