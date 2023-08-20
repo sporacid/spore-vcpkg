@@ -6,10 +6,7 @@ vcpkg_from_github(
   HEAD_REF main
 )
 
-vcpkg_cmake_configure(
-  SOURCE_PATH "${SOURCE_PATH}"
-  PREFER_NINJA
+file(
+  INSTALL ${CMAKE_CURRENT_LIST_DIR}/cmake/spore_semver.cmake
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore/spore_semver.cmake
 )
-
-vcpkg_cmake_install()
-vcpkg_cmake_config_fixup()
