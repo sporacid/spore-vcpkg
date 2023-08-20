@@ -1,5 +1,5 @@
 {
-  "name": "foonathan-cppast",
+  "name": "foonathan-type-safe",
   "homepage": "https://github.com/foonathan/type_safe",
   "version-string": "latest",
   "dependencies": [
