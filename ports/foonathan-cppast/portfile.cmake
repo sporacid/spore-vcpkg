@@ -6,6 +6,11 @@ vcpkg_from_github(
   HEAD_REF main
 )
 
+vcpkg_apply_patches(
+  SOURCE_PATH ${SOURCE_PATH}
+  PATCHES "0001-fixup-top-level-directory.patch"
+)
+
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
 )
