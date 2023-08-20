@@ -1,0 +1,15 @@
+{
+  "name": "p-ranav-glob",
+  "homepage": "https://github.com/p-ranav/glob",
+  "version-string": "latest",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
