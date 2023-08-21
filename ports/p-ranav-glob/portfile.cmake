@@ -8,19 +8,28 @@ vcpkg_from_github(
     0001-fixup-cpm-packages.patch
 )
 
+vcpkg_check_linkage(
+  ONLY_STATIC_LIBRARY
+)
+
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
+  OPTIONS
+    -DBUILD_SHARED_LIBS=OFF
 )
 
 vcpkg_cmake_install()
-# vcpkg_cmake_config_fixup(
-#   PACKAGE_NAME Glob
-# )
 
-# file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
+file(
+  REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include
+)
 
 configure_file(
-  "${CMAKE_CURRENT_LIST_DIR}/config.cmake.in"
-  "${CURRENT_PACKAGES_DIR}/share/p-ranav-glob/p-ranav-glob-config.cmake"
+  ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
+  ${CURRENT_PACKAGES_DIR}/share/p-ranav-glob/p-ranav-glob-config.cmake
   @ONLY
+)
+
+vcpkg_install_copyright(
+  FILE_LIST ${SOURCE_PATH}/LICENSE
 )
