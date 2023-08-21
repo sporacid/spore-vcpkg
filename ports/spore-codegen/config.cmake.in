@@ -1,0 +1,13 @@
+add_executable(spore::spore-codegen IMPORTED)
+
+set_target_properties(
+  spore::spore-codegen
+  PROPERTIES
+    IMPORTED_LOCATION_RELEASE "${PACKAGE_PREFIX_DIR}/tools/${PORT}/${PORT}${VCPKG_TARGET_EXECUTABLE_SUFFIX}"
+    IMPORTED_CONFIGURATIONS "Release"
+)
+
+set(SPORE_CODEGEN_FOUND TRUE)
+set(SPORE_CODEGEN_SCRIPTS "${PACKAGE_PREFIX_DIR}/share/${PORT}")
+
+unset(_IMPORT_PREFIX)

@@ -25,6 +25,12 @@ vcpkg_copy_tools(
   AUTO_CLEAN
 )
 
+configure_file(
+  ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
+  ${CURRENT_PACKAGES_DIR}/share/spore-codegen/spore-codegen-config.cmake
+  @ONLY
+)
+
 file(
   INSTALL ${SOURCE_PATH}/cmake/
   DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
