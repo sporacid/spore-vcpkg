@@ -1,7 +1,7 @@
 {
   "name": "spore-codegen",
   "version-string": "latest",
-  "description": "A tool to generate code from libclang AST",
+  "description": "A tool to generate code from lib clang AST",
   "homepage": "https://github.com/sporacid/spore-codegen",
   "dependencies": [
     "argparse",
@@ -13,7 +13,11 @@
     "p-ranav-glob",
     "picosha2",
     "spdlog",
-    "spore-cmake",
+    "tiny-process-library",
+    {
+      "name": "spore-cmake",
+      "host": true
+    },
     {
       "name": "vcpkg-cmake",
       "host": true
