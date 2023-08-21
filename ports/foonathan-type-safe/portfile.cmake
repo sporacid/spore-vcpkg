@@ -12,10 +12,16 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
+file(
+  REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include
+)
 
 configure_file(
-  "${CMAKE_CURRENT_LIST_DIR}/foonathan-type-safe-config.cmake.in"
+  "${CMAKE_CURRENT_LIST_DIR}/config.cmake.in"
   "${CURRENT_PACKAGES_DIR}/share/foonathan-type-safe/foonathan-type-safe-config.cmake"
   @ONLY
+)
+
+vcpkg_install_copyright(
+  FILE_LIST ${SOURCE_PATH}/LICENSE
 )

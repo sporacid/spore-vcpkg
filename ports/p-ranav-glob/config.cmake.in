@@ -17,4 +17,6 @@ set_target_properties(
     IMPORTED_CONFIGURATIONS         "Debug;Release"
 )
 
+set(p-ranav-glob_FOUND TRUE)
+
 unset(_IMPORT_PREFIX)
