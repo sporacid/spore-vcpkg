@@ -16,8 +16,8 @@ index 556d847..195b3e2 100644
 
  # create a target here instead of using the one provided
 -add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tpl)
-+find_package(cppast_tiny_process CONFIG)
-+if (NOT ${cppast_tiny_process_FOUND})
++find_package(tiny-process-library CONFIG)
++if (NOT ${tiny_process_library_FOUND})
 +    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tpl)
 +endif ()
  add_library(_cppast_tiny_process INTERFACE)
