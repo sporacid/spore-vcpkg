@@ -16,8 +16,17 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
+vcpkg_install_copyright(
+  FILE_LIST ${SOURCE_PATH}/LICENSE
+)
+
 vcpkg_copy_tools(
   TOOL_NAMES spore-codegen
+  AUTO_CLEAN
+)
+
+file(
+  REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include
 )
 
 file(
