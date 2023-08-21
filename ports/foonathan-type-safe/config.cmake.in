@@ -11,9 +11,9 @@ add_library(foonathan::type-safe INTERFACE IMPORTED)
 set_target_properties(
   foonathan::type-safe
   PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES   "${PACKAGE_PREFIX_DIR}/include"
+    INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 
-set(foonathan-type-safe_FOUND TRUE)
+set(FOONATHAN_TYPE_SAFE_FOUND TRUE)
 
 unset(_IMPORT_PREFIX)

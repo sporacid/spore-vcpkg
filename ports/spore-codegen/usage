@@ -1,0 +1,9 @@
+The package spore-codegen provides CMake scripts and an executable CMake target:
+
+    find_package(spore-codegen CONFIG REQUIRED)
+
+    list(APPEND CMAKE_MODULE_PATH ${SPORE_CODEGEN_SCRIPTS})
+
+    include(SporeCodegen)
+
+    spore_codegen(target BIN_NAME spore::spore-codegen)
