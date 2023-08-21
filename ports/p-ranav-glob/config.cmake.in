@@ -6,7 +6,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-add_library(p-ranav::glob INTERFACE IMPORTED)
+add_library(p-ranav::glob IMPORTED)
 
 set_target_properties(
   p-ranav::glob

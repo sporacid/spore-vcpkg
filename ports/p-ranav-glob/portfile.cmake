@@ -13,11 +13,14 @@ vcpkg_cmake_configure(
 )
 
 vcpkg_cmake_install()
+vcpkg_cmake_config_fixup(
+  PACKAGE_NAME Glob
+)
 
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
+# file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
 
 configure_file(
-  "${CMAKE_CURRENT_LIST_DIR}/p-ranav-glob-config.cmake.in"
+  "${CMAKE_CURRENT_LIST_DIR}/config.cmake.in"
   "${CURRENT_PACKAGES_DIR}/share/p-ranav-glob/p-ranav-glob-config.cmake"
   @ONLY
 )

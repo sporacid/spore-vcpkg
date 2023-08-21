@@ -14,4 +14,6 @@ set_target_properties(
     INTERFACE_INCLUDE_DIRECTORIES   "${PACKAGE_PREFIX_DIR}/include"
 )
 
+set(foonathan-type-safe_FOUND TRUE)
+
 unset(_IMPORT_PREFIX)

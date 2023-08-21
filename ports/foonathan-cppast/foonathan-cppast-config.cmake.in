@@ -19,4 +19,6 @@ set_target_properties(
     IMPORTED_CONFIGURATIONS         "Debug;Release"
 )
 
+set(foonathan-cppast_FOUND TRUE)
+
 unset(_IMPORT_PREFIX)
