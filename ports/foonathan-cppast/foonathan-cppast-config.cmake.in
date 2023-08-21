@@ -1,5 +1,22 @@
-@PACKAGE_INIT@
+get_filename_component(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
 
-include("${CMAKE_CURRENT_LIST_DIR}/foonathan-cppast-targets.cmake")
+if(_IMPORT_PREFIX STREQUAL "/")
+  set(_IMPORT_PREFIX "")
+endif()
 
-check_required_components(foonathan-cppast)
+add_library(foonathan::cppast INTERFACE IMPORTED)
+
+set_target_properties(
+  foonathan::cppast
+  PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES   "${PACKAGE_PREFIX_DIR}/include"
+    IMPORTED_LOCATION_DEBUG         "${_IMPORT_PREFIX}/debug/bin/cppast.dll"
+    IMPORTED_IMPLIB_DEBUG           "${_IMPORT_PREFIX}/debug/lib/cppast.lib"
+    IMPORTED_LOCATION_RELEASE       "${_IMPORT_PREFIX}/bin/cppast.dll"
+    IMPORTED_IMPLIB_RELEASE         "${_IMPORT_PREFIX}/lib/cppast.lib"
+    IMPORTED_CONFIGURATIONS         "Debug;Release"
+)
+
+unset(_IMPORT_PREFIX)
