@@ -1,3 +1,5 @@
+include(CMakeFindDependencyMacro)
+
 find_dependency(Clang REQUIRED)
 find_dependency(foonathan-type-safe REQUIRED)
 find_dependency(tiny-process-library REQUIRED)
@@ -15,3 +17,5 @@ set_target_properties(
 )
 
 set(foonathan-cppast_FOUND TRUE)
+
+unset(_IMPORT_PREFIX)
