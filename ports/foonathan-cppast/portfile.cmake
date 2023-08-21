@@ -43,5 +43,5 @@ configure_file(
 )
 
 vcpkg_install_copyright(
-  FILE_LIST ${SOURCE_PATH}/LICENSE
+  FILE_LIST ${SOURCE_PATH}/LICENSE.md
 )
