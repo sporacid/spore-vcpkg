@@ -16,6 +16,10 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
+vcpkg_copy_tools(
+  TOOL_NAMES spore-codegen
+)
+
 file(
   INSTALL ${SOURCE_PATH}/cmake/SporeCodegen.cmake
   DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
