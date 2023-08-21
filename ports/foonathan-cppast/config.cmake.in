@@ -6,8 +6,8 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-find_dependency(foonathan::type_safe REQUIRED)
-find_dependency(tiny-process-library::tiny-process-library REQUIRED)
+find_dependency(foonathan-type-safe REQUIRED)
+find_dependency(tiny-process-library REQUIRED)
 
 add_library(foonathan::cppast STATIC IMPORTED)
 
