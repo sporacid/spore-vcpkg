@@ -6,7 +6,13 @@ vcpkg_from_github(
   HEAD_REF main
 )
 
+configure_file(
+  ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
+  ${CURRENT_PACKAGES_DIR}/share/${PORT}/${PORT}-config.cmake
+  @ONLY
+)
+
 file(
-  INSTALL ${SOURCE_PATH}/cmake/spore_semver.cmake
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
+  INSTALL ${SOURCE_PATH}/cmake/
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
 )

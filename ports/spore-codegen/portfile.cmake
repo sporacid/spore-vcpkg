@@ -27,7 +27,7 @@ vcpkg_copy_tools(
 
 configure_file(
   ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
-  ${CURRENT_PACKAGES_DIR}/share/spore-codegen/spore-codegen-config.cmake
+  ${CURRENT_PACKAGES_DIR}/share/${PORT}/${PORT}-config.cmake
   @ONLY
 )
 

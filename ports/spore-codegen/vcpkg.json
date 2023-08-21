@@ -13,13 +13,7 @@
     "p-ranav-glob",
     "picosha2",
     "spdlog",
-    "spore-semver",
-    {
-      "name": "llvm",
-      "features": [
-        "clang"
-      ]
-    },
+    "spore-cmake",
     {
       "name": "vcpkg-cmake",
       "host": true

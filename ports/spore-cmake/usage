@@ -1,0 +1,5 @@
+The package spore-cmake provides CMake scripts:
+
+    find_package(spore-cmake CONFIG REQUIRED)
+
+    list(APPEND CMAKE_MODULE_PATH ${SPORE_CMAKE_SCRIPTS})

@@ -1,0 +1,8 @@
+get_filename_component(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
+
+set(SPORE_CMAKE_FOUND TRUE)
+set(SPORE_CMAKE_SCRIPTS "${_IMPORT_PREFIX}/share/@PORT@")
+
+unset(_IMPORT_PREFIX)
