@@ -26,12 +26,13 @@ vcpkg_copy_tools(
 )
 
 file(
-  INSTALL ${SOURCE_PATH}/cmake
+  INSTALL ${SOURCE_PATH}/cmake/
   DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
 )
 
 file(
   REMOVE_RECURSE
     ${CURRENT_PACKAGES_DIR}/cmake
+    ${CURRENT_PACKAGES_DIR}/debug/cmake
     ${CURRENT_PACKAGES_DIR}/debug/include
 )
