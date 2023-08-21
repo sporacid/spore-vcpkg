@@ -12,7 +12,7 @@
       "baseline": "latest",
       "port-version": 0
     },
-    "spore-semver": {
+    "spore-cmake": {
       "baseline": "latest",
       "port-version": 0
     },
