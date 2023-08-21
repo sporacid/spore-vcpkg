@@ -26,10 +26,12 @@ vcpkg_copy_tools(
 )
 
 file(
-  REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include
+  INSTALL ${SOURCE_PATH}/cmake/SporeCodegen.cmake
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
 )
 
 file(
-  INSTALL ${SOURCE_PATH}/cmake/SporeCodegen.cmake
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
+  REMOVE_RECURSE
+    ${CURRENT_PACKAGES_DIR}/cmake
+    ${CURRENT_PACKAGES_DIR}/debug/include
 )
