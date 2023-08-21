@@ -1,11 +1,4 @@
-get_filename_component(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
-get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
-get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
-
-if(_IMPORT_PREFIX STREQUAL "/")
-  set(_IMPORT_PREFIX "")
-endif()
-
+find_dependency(Clang REQUIRED)
 find_dependency(foonathan-type-safe REQUIRED)
 find_dependency(tiny-process-library REQUIRED)
 
@@ -14,13 +7,11 @@ add_library(foonathan::cppast STATIC IMPORTED)
 set_target_properties(
   foonathan::cppast
   PROPERTIES
+    INTERFACE_LINK_LIBRARIES        "tiny-process-library::tiny-process-library;libclang"
     INTERFACE_INCLUDE_DIRECTORIES   "${PACKAGE_PREFIX_DIR}/include"
-    INTERFACE_LINK_LIBRARIES        tiny-process-library::tiny-process-library
-    IMPORTED_LOCATION_DEBUG         "${_IMPORT_PREFIX}/debug/lib/cppast.lib"
-    IMPORTED_LOCATION_RELEASE       "${_IMPORT_PREFIX}/lib/cppast.lib"
+    IMPORTED_LOCATION_DEBUG         "${PACKAGE_PREFIX_DIR}/debug/lib/cppast.lib"
+    IMPORTED_LOCATION_RELEASE       "${PACKAGE_PREFIX_DIR}/lib/cppast.lib"
     IMPORTED_CONFIGURATIONS         "Debug;Release"
 )
 
 set(foonathan-cppast_FOUND TRUE)
-
-unset(_IMPORT_PREFIX)
