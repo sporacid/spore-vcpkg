@@ -24,10 +24,10 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
-vcpkg_cmake_config_fixup(
-  PACKAGE_NAME cppast
-  CONFIG_PATH lib/cmake/cppast
-)
+# vcpkg_cmake_config_fixup(
+#   PACKAGE_NAME cppast
+#   CONFIG_PATH lib/cmake/cppast
+# )
 
 file(
   REMOVE_RECURSE
