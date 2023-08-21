@@ -4,6 +4,8 @@ vcpkg_from_github(
   REF 8cd16218ae648addf166977d7e41b914768bcb05
   SHA512 a2c7f2c4d43a583d3915d3f9fd0b6e0be48930f455b47c9559cf641352020c545f6d0ddc4ea8f6b8d5a4f54a6cc3b1a05295a6aa5d83a398758b69b12072adcb
   HEAD_REF master
+  PATCHES
+    0001-fixup-cpm-packages.patch
 )
 
 vcpkg_cmake_configure(
