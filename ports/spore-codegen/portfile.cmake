@@ -1,7 +1,7 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF 02d0a7a4d24e72feeb1bdaab08ab74f2682e3278
+  REF 85988e54b83c698c8d1dc5bd6fe03b2946eb8ad7
   SHA512 042835b3c752e13e033c2255dda40b7d042dfa56dd9b477ff423b952a06b7d324d667d5035292f18662c158540468a456d50b8a3afc3042b0bfd6aee3fd898bc
   HEAD_REF main
 )
@@ -26,8 +26,8 @@ vcpkg_copy_tools(
 )
 
 file(
-  INSTALL ${SOURCE_PATH}/cmake/SporeCodegen.cmake
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/spore
+  INSTALL ${SOURCE_PATH}/cmake
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
 )
 
 file(
