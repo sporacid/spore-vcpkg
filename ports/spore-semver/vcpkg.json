@@ -1,6 +1,6 @@
 {
   "name": "spore-semver",
-  "version": "1.0.0",
+  "version-string": "latest",
   "description": "CMake scripts for semantic versioning",
   "homepage": "https://github.com/sporacid/spore-semver",
   "dependencies": [

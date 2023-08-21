@@ -13,11 +13,11 @@
       "port-version": 0
     },
     "spore-semver": {
-      "baseline": "1.0.0",
+      "baseline": "latest",
       "port-version": 0
     },
     "spore-codegen": {
-      "baseline": "1.0.0",
+      "baseline": "latest",
       "port-version": 0
     }
   }

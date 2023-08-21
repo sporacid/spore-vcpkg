@@ -1,6 +1,6 @@
 {
   "name": "spore-codegen",
-  "version": "1.0.0",
+  "version-string": "latest",
   "description": "A tool to generate code from libclang AST",
   "homepage": "https://github.com/sporacid/spore-codegen",
   "dependencies": [
