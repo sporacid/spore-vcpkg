@@ -6,6 +6,7 @@ vcpkg_from_github(
   HEAD_REF main
   PATCHES
     0001-fixup-top-level-directory.patch
+    0002-fixup-tiny-process-library.patch
 )
 
 vcpkg_cmake_configure(
@@ -13,4 +14,3 @@ vcpkg_cmake_configure(
 )
 
 vcpkg_cmake_install()
-# vcpkg_cmake_config_fixup()

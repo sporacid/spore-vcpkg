@@ -1,0 +1,87 @@
+From f922cb554cb0922a6ba468f9d0d88590b60c4e26 Mon Sep 17 00:00:00 2001
+From: Simon Turcotte-Langevin <sturcottelangevin@bhvr.com>
+Date: Sun, 20 Aug 2023 20:09:29 -0400
+Subject: [PATCH] Fixup tiny-process-library
+
+---
+ 0001-Fixup-top-level-sheanigans.patch | 51 +++++++++++++++++++++++++++
+ external/external.cmake               |  5 ++-
+ 2 files changed, 55 insertions(+), 1 deletion(-)
+ create mode 100644 0001-Fixup-top-level-sheanigans.patch
+
+diff --git a/0001-Fixup-top-level-sheanigans.patch b/0001-Fixup-top-level-sheanigans.patch
+new file mode 100644
+index 0000000..85d282c
+--- /dev/null
++++ b/0001-Fixup-top-level-sheanigans.patch
+@@ -0,0 +1,51 @@
++From f120ddabf4e46661c081dbbaffa1419c221df7cd Mon Sep 17 00:00:00 2001
++From: Simon Turcotte-Langevin <sturcottelangevin@bhvr.com>
++Date: Sun, 20 Aug 2023 19:41:04 -0400
++Subject: [PATCH] Fixup top level sheanigans
++
++---
++ CMakeLists.txt | 12 +++---------
++ 1 file changed, 3 insertions(+), 9 deletions(-)
++
++diff --git a/CMakeLists.txt b/CMakeLists.txt
++index 80d0aca..61d84ef 100644
++--- a/CMakeLists.txt
+++++ b/CMakeLists.txt
++@@ -5,31 +5,25 @@
++ cmake_minimum_required(VERSION 3.11)
++ project(cppast VERSION 0.1.0)
++ 
++-if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
++-    set(is_top_level_project TRUE)
++-else()
++-    set(is_top_level_project FALSE)
++-endif()
++-
++ # options
++ option(CPPAST_BUILD_TEST "whether or not to build the tests" OFF)
++ option(CPPAST_BUILD_EXAMPLE "whether or not to build the examples" OFF)
++ option(CPPAST_BUILD_TOOL "whether or not to build the tool" OFF)
++ 
++-if(${CPPAST_BUILD_TEST} OR ${is_top_level_project})
+++if(${CPPAST_BUILD_TEST})
++     set(build_test ON)
++     set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # for the self integration test
++ else()
++     set(build_test OFF)
++ endif()
++ 
++-if(${CPPAST_BUILD_EXAMPLE} OR ${is_top_level_project})
+++if(${CPPAST_BUILD_EXAMPLE})
++     set(build_example ON)
++ else()
++     set(build_example OFF)
++ endif()
++ 
++-if(${CPPAST_BUILD_TOOL} OR ${is_top_level_project})
+++if(${CPPAST_BUILD_TOOL})
++     set(build_tool ON)
++ else()
++     set(build_tool OFF)
++-- 
++2.35.1.windows.2
++
+diff --git a/external/external.cmake b/external/external.cmake
+index 556d847..887ecc1 100644
+--- a/external/external.cmake
++++ b/external/external.cmake
+@@ -19,7 +19,10 @@ endif()
+ find_package(Threads REQUIRED QUIET)
+ 
+ # create a target here instead of using the one provided
+-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tpl)
++find_package(cppast_tiny_process CONFIG)
++if (NOT cppast_tiny_process_FOUND)
++    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tpl)
++endif ()
+ add_library(_cppast_tiny_process INTERFACE)
+ target_include_directories(_cppast_tiny_process INTERFACE ${tiny_process_dir})
+ target_link_libraries(_cppast_tiny_process INTERFACE tiny-process-library::tiny-process-library Threads::Threads)
+-- 
+2.35.1.windows.2
+
