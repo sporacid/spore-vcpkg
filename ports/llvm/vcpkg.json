@@ -1,6 +1,6 @@
 {
   "name": "llvm",
-  "version": "15.0.7",
+  "version-string": "latest",
   "port-version": 0,
   "description": "Empty overlay over LLVM Compiler Infrastructure.",
   "homepage": "https://llvm.org",
