@@ -8,6 +8,10 @@
       "baseline": "latest",
       "port-version": 0
     },
+    "llvm": {
+      "baseline": "latest",
+      "port-version": 0
+    },
     "p-ranav-glob": {
       "baseline": "latest",
       "port-version": 0

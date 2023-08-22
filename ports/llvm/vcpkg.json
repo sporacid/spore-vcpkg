@@ -1,0 +1,6 @@
+{
+  "name": "llvm",
+  "version-string": "latest",
+  "description": "An empty overlay for LLVM",
+  "homepage": "https://github.com/llvm/llvm-project"
+}
