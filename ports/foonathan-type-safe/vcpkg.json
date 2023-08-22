@@ -3,7 +3,7 @@
   "homepage": "https://github.com/foonathan/type_safe",
   "version-string": "latest",
   "dependencies": [
-    "debug-assert",
+    "foonathan-debug-assert",
     {
       "name": "vcpkg-cmake",
       "host": true
