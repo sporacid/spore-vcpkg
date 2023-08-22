@@ -1,0 +1,17 @@
+{
+  "name": "foonathan-debug-assert",
+  "version-string": "latest",
+  "port-version": 0,
+  "description": "Provides flexible DEBUG_ASSERT() macro.",
+  "homepage": "https://github.com/foonathan/debug_assert",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

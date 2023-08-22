@@ -4,6 +4,10 @@
       "baseline": "latest",
       "port-version": 0
     },
+    "foonathan-debug-assert": {
+      "baseline": "latest",
+      "port-version": 0
+    },
     "foonathan-type-safe": {
       "baseline": "latest",
       "port-version": 0
