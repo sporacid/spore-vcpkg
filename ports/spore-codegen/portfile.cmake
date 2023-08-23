@@ -11,7 +11,6 @@ vcpkg_cmake_configure(
   OPTIONS
     -DSPORE_BUILD_EXAMPLES=OFF
     -DSPORE_BUILD_TESTS=OFF
-    -DSPORE_COMPILE_COMMANDS=OFF
 )
 
 vcpkg_cmake_install()
