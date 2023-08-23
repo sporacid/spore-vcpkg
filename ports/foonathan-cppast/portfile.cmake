@@ -39,6 +39,8 @@ vcpkg_cmake_configure(
     ${CPPAST_ADDITIONAL_OPTIONS}
 )
 
+message(STATUS ${CPPAST_ADDITIONAL_OPTIONS})
+
 vcpkg_cmake_install()
 
 file(
