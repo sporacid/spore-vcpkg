@@ -29,6 +29,8 @@ if (CLANG_BINARY)
   list(APPEND CPPAST_ADDITIONAL_OPTIONS -DCLANG_BINARY=${CLANG_BINARY})
 endif()
 
+message(STATUS ${CPPAST_ADDITIONAL_OPTIONS})
+
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
@@ -38,8 +40,6 @@ vcpkg_cmake_configure(
     -DCPPAST_BUILD_TOOL=OFF
     ${CPPAST_ADDITIONAL_OPTIONS}
 )
-
-message(STATUS ${CPPAST_ADDITIONAL_OPTIONS})
 
 vcpkg_cmake_install()
 
