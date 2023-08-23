@@ -13,30 +13,6 @@ vcpkg_check_linkage(
   ONLY_STATIC_LIBRARY
 )
 
-vcpkg_cmake_get_vars(
-  CMAKE_VARS_FILE
-)
-
-include(${CMAKE_VARS_FILE})
-
-if (${LLVM_CONFIG_BINARY})
-  list(APPEND CPPAST_ADDITIONAL_OPTIONS -DLLVM_CONFIG_BINARY=${LLVM_CONFIG_BINARY})
-endif ()
-
-if (${LIBCLANG_LIBRARY})
-  list(APPEND CPPAST_ADDITIONAL_OPTIONS -DLIBCLANG_LIBRARY=${LIBCLANG_LIBRARY})
-endif ()
-
-if (${LIBCLANG_INCLUDE_DIR})
-  list(APPEND CPPAST_ADDITIONAL_OPTIONS -DLIBCLANG_INCLUDE_DIR=${LIBCLANG_INCLUDE_DIR})
-endif ()
-
-if (${CLANG_BINARY})
-  list(APPEND CPPAST_ADDITIONAL_OPTIONS -DCLANG_BINARY=${CLANG_BINARY})
-endif ()
-
-message(STATUS ${CPPAST_ADDITIONAL_OPTIONS})
-
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
@@ -44,7 +20,6 @@ vcpkg_cmake_configure(
     -DCPPAST_BUILD_TEST=OFF
     -DCPPAST_BUILD_EXAMPLE=OFF
     -DCPPAST_BUILD_TOOL=OFF
-    ${CPPAST_ADDITIONAL_OPTIONS}
 )
 
 vcpkg_cmake_install()
@@ -55,8 +30,8 @@ file(
 )
 
 configure_file(
-  "${CMAKE_CURRENT_LIST_DIR}/config.cmake.in"
-  "${CURRENT_PACKAGES_DIR}/share/foonathan-cppast/foonathan-cppast-config.cmake"
+  ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
+  ${CURRENT_PACKAGES_DIR}/share/foonathan-cppast/foonathan-cppast-config.cmake
   @ONLY
 )
 
