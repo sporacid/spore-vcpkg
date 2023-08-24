@@ -1,7 +1,7 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF f1c5a184bc09e7bb62789f614f79e05074b6f2c3
+  REF f80b62397a8e4f63150e322818ab8359e268d49a
   SHA512 decb852cec224e77c4f2236020b40aff786d2143baa4e99e9613adeb807e0d165f3e137e7a3ddaa739ac79189f30d229e50f0f4971d0a7212c2d8225abd0a525
   HEAD_REF main
 )
@@ -43,6 +43,5 @@ file(
 file(
   REMOVE_RECURSE
     ${CURRENT_PACKAGES_DIR}/cmake
-    ${CURRENT_PACKAGES_DIR}/debug/cmake
-    ${CURRENT_PACKAGES_DIR}/debug/include
+    ${CURRENT_PACKAGES_DIR}/debug
 )
