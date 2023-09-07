@@ -1,0 +1,17 @@
+{
+  "name": "bombomby-optick",
+  "version-string": "latest",
+  "port-version": 0,
+  "description": "Optick is a super-lightweight C++ profiler for Games.",
+  "homepage": "https://github.com/bombomby/optick",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

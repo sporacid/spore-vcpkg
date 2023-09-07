@@ -1,5 +1,9 @@
 {
   "default": {
+    "bombomby-optick": {
+      "baseline": "latest",
+      "port-version": 0
+    },
     "foonathan-cppast": {
       "baseline": "latest",
       "port-version": 0
