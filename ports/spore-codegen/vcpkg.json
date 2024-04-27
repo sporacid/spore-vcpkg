@@ -7,13 +7,18 @@
     "argparse",
     "catch2",
     "fmt",
-    "foonathan-cppast",
     "inja",
     "nlohmann-json",
     "p-ranav-glob",
     "picosha2",
     "spdlog",
     "tiny-process-library",
+    {
+      "name": "llvm",
+      "features": [
+        "clang"
+      ]
+    },
     {
       "name": "spore-cmake",
       "host": true
