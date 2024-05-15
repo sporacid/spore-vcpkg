@@ -1,7 +1,7 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF 1bfaad37756d2ce980509376d696a1637c7f791e
+  REF 448de3f583ee2348ec1c5171fd891ffd0827845a
   SHA512 b04a2f296916978bcf43ac50905003afaeedbc35a64b5c069de597f244a5cb6773b2ff5b9944dfdb51e514c4c5e37d44cb560658c4473901a69c10f352d8ea48
   HEAD_REF main
 )
@@ -9,6 +9,7 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
+    -DCMAKE_BUILD_TYPE=Release
     -DSPORE_BUILD_EXAMPLES=OFF
     -DSPORE_BUILD_TESTS=OFF
 )
