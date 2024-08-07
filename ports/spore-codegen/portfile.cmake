@@ -1,7 +1,7 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF b8544d172dad78a88278bd68288377a084487f45
+  REF a45640af59cba571f96a7c82a73ab1d35d56333c
   SHA512 adeacdcd4499ddf3c7f7f9c8a8dca8d9f0b2f69576394b361ed68f95c1222823b23be348d1c3e9125e7788d0e1ba1866653ab08fa37664f751cee7c2563850c7
   HEAD_REF main
 )
@@ -29,6 +29,11 @@ configure_file(
   ${CMAKE_CURRENT_LIST_DIR}/config.cmake.in
   ${CURRENT_PACKAGES_DIR}/share/${PORT}/${PORT}-config.cmake
   @ONLY
+)
+
+file(
+  INSTALL ${SOURCE_PATH}/VERSION
+  DESTINATION ${CURRENT_PACKAGES_DIR}/VERSION
 )
 
 file(
