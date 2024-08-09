@@ -2,7 +2,7 @@
   "versions": [
     {
       "version-string": "latest",
-      "git-tree": "75db3b3a0e66c18c08e838e8baa92c8f9dd5c8a0"
+      "git-tree": "676185551d8bb05561ce782fca8f0bd4d9033341"
     },
     {
       "version-string": "2.1",
@@ -11,6 +11,10 @@
     {
       "version-string": "2.2",
       "git-tree": "75db3b3a0e66c18c08e838e8baa92c8f9dd5c8a0"
+    },
+    {
+      "version-string": "2.3",
+      "git-tree": "676185551d8bb05561ce782fca8f0bd4d9033341"
     }
   ]
 }
