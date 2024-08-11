@@ -1,7 +1,7 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF b13779c0f5bed5d0021b2bc3eafa9bb38df4d6ad
+  REF 49c59cd8c96df54f9841d4e50e496cb3fd0f0ef1
   SHA512 a158dbf0fa32b460145e24c8ecb606758663fe0c432cdd20948e03e04ae528bf1925a81465566db2d0701f2717ea2e22609c8f4fc65ead338451dbb552da1581
   HEAD_REF main
 )
