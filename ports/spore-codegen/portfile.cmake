@@ -17,10 +17,10 @@ vcpkg_check_features(
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
-    ${SPORE_CODEGEN_FEATURES}
     -DCMAKE_BUILD_TYPE=Release
     -DSPORE_BUILD_EXAMPLES=OFF
     -DSPORE_BUILD_TESTS=OFF
+    ${SPORE_CODEGEN_FEATURES}
 )
 
 vcpkg_cmake_install()
