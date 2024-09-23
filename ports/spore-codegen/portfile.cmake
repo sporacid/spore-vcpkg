@@ -1,9 +1,17 @@
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO sporacid/spore-codegen
-  REF cca259cb4d211d107ac99ee532419d6ef2404cda
+  REF 8e781b0571190ac7028fb882bceef515065c6310
   SHA512 e5683efcfd1f409189bf842007b7bf28c0cf4db37554aa7207c0f60f7fc9e35652033c42f108f43415678ff39ef28e40395c9434f1b02e05fae2f5c59853766a
   HEAD_REF main
+)
+
+vcpkg_check_features(
+  OUT_FEATURE_OPTIONS
+    SPORE_CODEGEN_FEATURES
+  FEATURES
+    cpp   SPORE_WITH_CPP
+    spirv SPORE_WITH_SPIRV
 )
 
 vcpkg_cmake_configure(
@@ -12,6 +20,7 @@ vcpkg_cmake_configure(
     -DCMAKE_BUILD_TYPE=Release
     -DSPORE_BUILD_EXAMPLES=OFF
     -DSPORE_BUILD_TESTS=OFF
+    ${SPORE_CODEGEN_FEATURES}
 )
 
 vcpkg_cmake_install()
