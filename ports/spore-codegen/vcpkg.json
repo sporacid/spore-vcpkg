@@ -1,6 +1,6 @@
 {
   "name": "spore-codegen",
-  "version-semver": "3.0.0",
+  "version": "3.0",
   "description": "A tool to generate code from AST parsers",
   "homepage": "https://github.com/sporacid/spore-codegen",
   "dependencies": [
