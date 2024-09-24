@@ -29,7 +29,7 @@
       "port-version": 0
     },
     "spore-codegen": {
-      "baseline": "latest",
+      "baseline": "experimental",
       "port-version": 0
     }
   }

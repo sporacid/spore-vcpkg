@@ -22,6 +22,9 @@
       "host": true
     }
   ],
+  "default-features": [
+    "cpp"
+  ],
   "features": {
     "cpp": {
       "description": "Support for clang-based C++ parser"
