@@ -1,0 +1,9 @@
+The package spore-embed provides CMake scripts and an executable CMake target:
+
+    find_package(spore-embed CONFIG REQUIRED)
+
+    list(APPEND CMAKE_MODULE_PATH ${SPORE_EMBED_SCRIPTS})
+
+    include(SporeEmbed)
+
+    spore_embed(file VARIABLE BIN_NAME spore::spore-embed)
