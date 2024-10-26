@@ -16,9 +16,11 @@ GIT_REPO=$(grep -Eo "REPO\s+(.+)" "$PORT_FILE" | sed -r 's/REPO\s+(.+)/\1/g')
 GIT_ARCHIVE_URL="https://github.com/$GIT_REPO/archive/$REF.tar.gz"
 GIT_ARCHIVE_FILE="$TEMP/$REF.tar.gz"
 
-curl -o "$GIT_ARCHIVE_FILE" "$GIT_ARCHIVE_URL"
+curl -L -o "$GIT_ARCHIVE_FILE" "$GIT_ARCHIVE_URL"
 
 SHA512=$(vcpkg hash "$GIT_ARCHIVE_FILE")
+
+rm -f "$GIT_ARCHIVE_FILE"
 
 sed -i -r -e "s/REF\s+[0-9a-fA-F]+/REF $REF/g" "$PORT_FILE"
 sed -i -r -e "s/SHA512\s+[0-9a-fA-F]+/SHA512 $SHA512/g" "$PORT_FILE"
