@@ -20,6 +20,10 @@
       "baseline": "latest",
       "port-version": 0
     },
+    "microsoft-pix": {
+      "baseline": "1.0",
+      "port-version": 0
+    },
     "p-ranav-glob": {
       "baseline": "latest",
       "port-version": 0
