@@ -35,8 +35,14 @@ file(
 )
 
 file(
+  INSTALL ${SOURCE_PATH}/codegen/
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}/codegen
+)
+
+file(
   REMOVE_RECURSE
   ${CURRENT_PACKAGES_DIR}/cmake
+  ${CURRENT_PACKAGES_DIR}/codegen
   ${CURRENT_PACKAGES_DIR}/debug
 )
 

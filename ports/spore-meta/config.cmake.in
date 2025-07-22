@@ -8,6 +8,7 @@ endif()
 
 set(SPORE_META_FOUND TRUE)
 set(SPORE_META_SCRIPTS "${_IMPORT_PREFIX}/share/@PORT@")
+set(SPORE_META_CODEGEN_DIRECTORY "${_IMPORT_PREFIX}/share/@PORT@/codegen")
 
 add_library(spore::@PORT@ INTERFACE IMPORTED)
 
