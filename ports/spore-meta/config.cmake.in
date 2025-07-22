@@ -1,0 +1,20 @@
+get_filename_component(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
+get_filename_component(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
+
+if(_IMPORT_PREFIX STREQUAL "/")
+  set(_IMPORT_PREFIX "")
+endif()
+
+set(SPORE_META_FOUND TRUE)
+set(SPORE_META_SCRIPTS "${_IMPORT_PREFIX}/share/@PORT@")
+
+add_library(spore::@PORT@ INTERFACE IMPORTED)
+
+set_target_properties(
+  spore::@PORT@
+  PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+)
+
+unset(_IMPORT_PREFIX)

@@ -35,6 +35,10 @@
     "spore-embed": {
       "baseline": "1.0",
       "port-version": 1
+    },
+    "spore-meta": {
+      "baseline": "1.0",
+      "port-version": 0
     }
   }
 }
