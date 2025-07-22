@@ -1,4 +1,4 @@
-The package spore-codegen provides CMake scripts and an executable CMake target:
+The package spore-meta provides CMake scripts and an interface CMake target:
 
     find_package(spore-meta CONFIG REQUIRED)
 
