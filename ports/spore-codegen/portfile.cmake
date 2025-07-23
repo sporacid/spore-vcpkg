@@ -16,6 +16,7 @@ vcpkg_check_features(
 
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
+  DISABLE_PARALLEL_CONFIGURE
   OPTIONS
     -DCMAKE_BUILD_TYPE=Release
     -DSPORE_BUILD_EXAMPLES=OFF
