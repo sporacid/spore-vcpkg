@@ -8,6 +8,10 @@
     {
       "version": "1.1",
       "git-tree": "ca566e6a02ebc120dbbc6b9dce05a51cfe5ea8a6"
+    },
+    {
+      "version": "1.2",
+      "git-tree": "cc461361041ac574af122ba3db813812c1fed32b"
     }
   ]
 }
