@@ -6,11 +6,17 @@ vcpkg_from_github(
   HEAD_REF main
 )
 
+vcpkg_check_features(
+  OUT_FEATURE_OPTIONS SPORE_META_FEATURES
+  FEATURES
+    examples SPORE_BUILD_EXAMPLES
+)
+
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   DISABLE_PARALLEL_CONFIGURE
   OPTIONS
-    -DSPORE_BUILD_EXAMPLES=OFF
+    ${SPORE_META_FEATURES}
 )
 
 vcpkg_cmake_install()
