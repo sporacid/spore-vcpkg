@@ -12,6 +12,10 @@
     {
       "version": "1.2",
       "git-tree": "0c852344bc183fe45c88662c1cd6655acfa97c54"
+    },
+    {
+      "version": "1.3",
+      "git-tree": "d2494a617b555b77f0386a4eca9a5bd02509fd12"
     }
   ]
 }
