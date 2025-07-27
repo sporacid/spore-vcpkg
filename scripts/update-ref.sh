@@ -26,7 +26,11 @@ rm -f "$GIT_ARCHIVE_FILE"
 sed -i -r -e "s/REF\s+[0-9a-fA-F]+/REF $REF/g" "$PORT_FILE"
 sed -i -r -e "s/SHA512\s+[0-9a-fA-F]+/SHA512 $SHA512/g" "$PORT_FILE"
 
-git add "$PORT_FILE"
+jq --arg version "$VERSION" '.version = $version' "$VCPKG_FILE" > "$VCPKG_FILE.tmp"
+
+mv "$VCPKG_FILE.tmp" "$VCPKG_FILE"
+
+git add "$PORT_FILE" "$VCPKG_FILE"
 git commit -m "feat: Update $PORT:$VERSION to $REF"
 
 GIT_TREE=$(git rev-parse "HEAD:$PORT_DIR")
@@ -41,12 +45,9 @@ jq --arg version "$VERSION" --arg git_tree "$GIT_TREE" '
     )
 ' "$VERSION_FILE" > "$VERSION_FILE.tmp"
 
-jq --arg version "$VERSION" '.version = $version' "$VCPKG_FILE" > "$VCPKG_FILE.tmp"
-
 mv "$VERSION_FILE.tmp" "$VERSION_FILE"
-mv "$VCPKG_FILE.tmp" "$VCPKG_FILE"
 
-git add "$VERSION_FILE" "$VCPKG_FILE"
+git add "$VERSION_FILE"
 git commit --amend --no-edit
 
 git push
