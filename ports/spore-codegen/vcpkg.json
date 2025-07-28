@@ -1,6 +1,6 @@
 {
   "name": "spore-codegen",
-  "version-string": "3.2",
+  "version": "3.2",
   "port-version": 0,
   "description": "A tool to generate code from AST parsers",
   "homepage": "https://github.com/sporacid/spore-codegen",
@@ -36,6 +36,5 @@
         "spirv-reflect"
       ]
     }
-  },
-  "version": "3.2"
+  }
 }
