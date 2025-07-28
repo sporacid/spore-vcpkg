@@ -36,5 +36,6 @@
         "spirv-reflect"
       ]
     }
-  }
+  },
+  "version": "3.2"
 }
