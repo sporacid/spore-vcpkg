@@ -13,23 +13,20 @@ set(SPORE_META_CODEGEN_DIRECTORY "${_IMPORT_PREFIX}/share/@PORT@/codegen")
 add_library(spore::@PORT@ INTERFACE IMPORTED)
 
 target_include_directories(
-  spore::@PORT@
-  INTERFACE
-    ${_IMPORT_PREFIX}/include
+  spore::@PORT@ INTERFACE
+  ${_IMPORT_PREFIX}/include
 )
 
-if (SPORE_WITH_STD_TYPES)
+if (@FEATURE_std-types@)
   # Required for std types macro magic
   target_compile_options(
-    spore::@PORT@
-    INTERFACE
-      $<$<CXX_COMPILER_ID:MSVC>:/Zc:preprocessor>
+    spore::@PORT@ INTERFACE
+    $<$<CXX_COMPILER_ID:MSVC>:/Zc:preprocessor>
   )
 
   target_compile_definitions(
-    spore::@PORT@
-    INTERFACE
-      SPORE_WITH_STD_TYPES
+    spore::@PORT@ INTERFACE
+    SPORE_WITH_STD_TYPES
   )
 endif ()
 
