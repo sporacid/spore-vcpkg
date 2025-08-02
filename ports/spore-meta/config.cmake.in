@@ -18,18 +18,18 @@ target_include_directories(
     ${_IMPORT_PREFIX}/include
 )
 
-target_compile_definitions(
-  spore::@PORT@
-  INTERFACE
-    SPORE_WITH_STD_TYPES=${SPORE_WITH_STD_TYPES}
-)
-
 if (SPORE_WITH_STD_TYPES)
   # Required for std types macro magic
   target_compile_options(
-    ${PROJECT_NAME}
+    spore::@PORT@
     INTERFACE
       $<$<CXX_COMPILER_ID:MSVC>:/Zc:preprocessor>
+  )
+
+  target_compile_definitions(
+    spore::@PORT@
+    INTERFACE
+      SPORE_WITH_STD_TYPES
   )
 endif ()
 
