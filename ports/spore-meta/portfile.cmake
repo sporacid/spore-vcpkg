@@ -9,7 +9,7 @@ vcpkg_from_github(
 vcpkg_check_features(
   OUT_FEATURE_OPTIONS SPORE_META_FEATURES
   FEATURES
-    examples SPORE_WITH_EXAMPLES
+    examples  SPORE_WITH_EXAMPLES
     std-types SPORE_WITH_STD_TYPES
 )
 
