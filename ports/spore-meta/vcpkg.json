@@ -21,6 +21,9 @@
       "host": true
     }
   ],
+  "default-features": [
+    "std-types"
+  ],
   "features": {
     "examples": {
       "description": "build examples",
