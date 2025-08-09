@@ -7,7 +7,6 @@
   "dependencies": [
     "argparse",
     "catch2",
-    "fmt",
     "inja",
     "nlohmann-json",
     "picosha2",
