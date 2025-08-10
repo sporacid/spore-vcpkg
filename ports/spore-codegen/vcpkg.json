@@ -1,6 +1,6 @@
 {
   "name": "spore-codegen",
-  "version": "3.4",
+  "version": "77cb3dc82991cedd11b3f6bc28faa1419a461398",
   "port-version": 0,
   "description": "A tool to generate code from AST parsers",
   "homepage": "https://github.com/sporacid/spore-codegen",
