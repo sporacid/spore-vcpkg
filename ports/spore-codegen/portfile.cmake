@@ -11,7 +11,7 @@ vcpkg_check_features(
     SPORE_CODEGEN_FEATURES
   FEATURES
     cpp   SPORE_WITH_CPP
-    spirv SPORE_WITH_SPIRVq
+    spirv SPORE_WITH_SPIRV
 )
 
 vcpkg_cmake_configure(
