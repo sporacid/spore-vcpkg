@@ -1,13 +1,11 @@
 {
   "name": "spore-codegen",
-  "version": "3.3",
+  "version": "3.4",
   "port-version": 0,
   "description": "A tool to generate code from AST parsers",
   "homepage": "https://github.com/sporacid/spore-codegen",
   "dependencies": [
     "argparse",
-    "catch2",
-    "fmt",
     "inja",
     "nlohmann-json",
     "picosha2",
