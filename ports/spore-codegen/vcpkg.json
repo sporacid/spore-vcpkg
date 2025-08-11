@@ -1,6 +1,6 @@
 {
   "name": "spore-codegen",
-  "version": "77cb3dc82991cedd11b3f6bc28faa1419a461398",
+  "version": "3.5",
   "port-version": 0,
   "description": "A tool to generate code from AST parsers",
   "homepage": "https://github.com/sporacid/spore-codegen",
@@ -10,7 +10,6 @@
     "nlohmann-json",
     "picosha2",
     "spdlog",
-    "tiny-process-library",
     "yaml-cpp",
     {
       "name": "vcpkg-cmake",
