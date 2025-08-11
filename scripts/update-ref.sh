@@ -12,6 +12,7 @@ PORT_FILE="$PORT_DIR/portfile.cmake"
 VCPKG_FILE="$PORT_DIR/vcpkg.json"
 VERSION_DIR="versions/${PORT:0:1}-"
 VERSION_FILE="$VERSION_DIR/$PORT.json"
+BASELINE_FILE="versions/baseline.json"
 
 GIT_REPO=$(grep -Eo "REPO\s+(.+)" "$PORT_FILE" | sed -r 's/REPO\s+(.+)/\1/g')
 GIT_ARCHIVE_URL="https://github.com/$GIT_REPO/archive/$REF.tar.gz"
@@ -47,7 +48,11 @@ jq --arg version "$VERSION" --arg git_tree "$GIT_TREE" '
 
 mv "$VERSION_FILE.tmp" "$VERSION_FILE"
 
-git add "$VERSION_FILE"
+jq --arg version "$VERSION" --arg port "$PORT" '.default.[$port].baseline = $version' "$BASELINE_FILE" > "$BASELINE_FILE.tmp"
+
+mv "$BASELINE_FILE.tmp" "$BASELINE_FILE"
+
+git add "$VERSION_FILE" "$BASELINE_FILE"
 git commit --amend --no-edit
 
 git push
