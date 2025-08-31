@@ -11,6 +11,7 @@ vcpkg_check_features(
   FEATURES
     examples  SPORE_WITH_EXAMPLES
     std-types SPORE_WITH_STD_TYPES
+    type-registration SPORE_WITH_TYPE_REGISTRATION
 )
 
 vcpkg_cmake_configure(
