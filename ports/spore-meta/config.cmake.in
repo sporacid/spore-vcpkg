@@ -30,6 +30,13 @@ if (@SPORE_WITH_STD_TYPES@)
   )
 endif ()
 
+if (@SPORE_WITH_STD_FORMATTERS@)
+  target_compile_definitions(
+    spore::@PORT@ INTERFACE
+    SPORE_WITH_STD_FORMATTERS
+  )
+endif ()
+
 if (@SPORE_WITH_TYPE_REGISTRATION@)
   target_compile_definitions(
     spore::@PORT@ INTERFACE
