@@ -22,7 +22,8 @@
     }
   ],
   "default-features": [
-    "std-types"
+    "std-types",
+    "std-formatters"
   ],
   "features": {
     "examples": {
@@ -33,6 +34,9 @@
     },
     "std-types": {
       "description": "include std type reflection"
+    },
+    "std-formatters": {
+      "description": "include std formatters for meta types"
     },
     "type-registration": {
       "description": "include runtime type registration mechanism"
