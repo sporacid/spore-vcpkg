@@ -28,24 +28,12 @@ configure_file(
 )
 
 file(
-  INSTALL ${SOURCE_PATH}/cmake/
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
-)
-
-file(
   INSTALL ${CMAKE_CURRENT_LIST_DIR}/usage
   DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
 )
 
 file(
-  INSTALL ${SOURCE_PATH}/codegen/
-  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}/codegen
-)
-
-file(
   REMOVE_RECURSE
-  ${CURRENT_PACKAGES_DIR}/cmake
-  ${CURRENT_PACKAGES_DIR}/codegen
   ${CURRENT_PACKAGES_DIR}/debug
 )
 
