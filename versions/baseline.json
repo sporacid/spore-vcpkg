@@ -39,6 +39,10 @@
     "spore-meta": {
       "baseline": "1.12",
       "port-version": 0
+    },
+    "spore-proxy": {
+      "baseline": "1.0",
+      "port-version": 0
     }
   }
 }

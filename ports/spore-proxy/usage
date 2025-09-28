@@ -1,0 +1,5 @@
+The package spore-proxy provides CMake scripts and an interface CMake target:
+
+    find_package(spore-proxy CONFIG REQUIRED)
+
+    target_link_library(main PRIVATE spore::spore-proxy)
