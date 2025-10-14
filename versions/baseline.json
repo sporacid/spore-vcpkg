@@ -29,7 +29,7 @@
       "port-version": 0
     },
     "spore-codegen": {
-      "baseline": "3.9",
+      "baseline": "3.10",
       "port-version": 0
     },
     "spore-embed": {
